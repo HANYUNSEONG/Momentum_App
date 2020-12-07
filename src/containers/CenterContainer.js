@@ -23,19 +23,16 @@ const NameWrap = styled.div`
 class CenterContainer extends Component {
     render() {
         const { handleSetName, name } = this.props;
-        return (
-            <NameWrap>
-                {
-                    // 초기 상태 => name 값이 없으면 name 입력하는 form component을 리턴함
-                    name === undefined
-                    ? <NameInputWrap handleSetName={handleSetName} />
-                    : [
-                        <NameView name={name} />,
-                        <Time />
-                    ]
-                }
-            </NameWrap>
-        )
+        // 초기 상태 => name 값이 없으면 name 입력하는 form component을 리턴함
+        if(name === undefined) return <NameWrap><NameInputWrap handleSetName={handleSetName} /></NameWrap>
+        else {
+            return (
+                <NameWrap>
+                    <NameView name={name} />
+                    <Time />
+                </NameWrap>
+            )
+        }
     }
 }
 

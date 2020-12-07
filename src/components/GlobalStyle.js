@@ -35,6 +35,7 @@ export const FlexBox = styled.div`
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    padding: ${props => props.isPadding && '.5rem'}
 `;
 
 export const DefaultInput = styled.input`
