@@ -5,6 +5,7 @@ import { GlobalStyle } from './components/GlobalStyle';
 
 import CenterContainer from './containers/CenterContainer';
 import WeatherContainer from './containers/WeatherContainer';
+import BookmarkContainer from './containers/BookmarkContainer';
 
 class App extends Component {
     render() {
@@ -13,6 +14,7 @@ class App extends Component {
                 <GlobalStyle />
                 <CenterContainer />
                 <WeatherContainer />
+                <BookmarkContainer handleToggle={this.props.handleToggle} />
             </>
         )
     }
@@ -24,4 +26,12 @@ const mapStatetoProps = (state) => {
     }
 }
 
-export default connect(mapStatetoProps)(App);
+const mapDispatchtoProps = (dispatch) => {
+    return {
+        handleToggle: (target) => {
+            document.getElementById(target).classList.toggle('on')
+        }
+    }
+}
+
+export default connect(mapStatetoProps, mapDispatchtoProps)(App);

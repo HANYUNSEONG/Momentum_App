@@ -11,10 +11,10 @@ const Info = styled.p`
 
 const Weather = ({ weather }) => {
     return (
-        <FlexBox isPadding={true}>
+        <FlexBox>
             <Info style={{fontSize: '1.5rem'}}>{weather.data.weather[0].description}</Info>
             <Info>
-                {Math.floor(weather.data.main.temp)} °C
+                {Math.floor(weather.data.main.temp)} °
             </Info>
         </FlexBox>
     )

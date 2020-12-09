@@ -25,8 +25,10 @@ const NextButtonStyle = {
 
 const inputStyle = {
     backgroundColor: 'transparent',
-    borderBottom: '2px solid #fff',
-    fontSize: '1.2rem'
+    fontSize: '1.2rem',
+    height: '3rem',
+    color: '#fff',
+    padding: '.5rem'
 }
 
 const NameInputWrap = ({ handleSetName }) => {

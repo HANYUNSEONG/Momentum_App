@@ -7,7 +7,7 @@ import { rootReducer } from '../reducers';
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['name']
+    whitelist: ['name', 'bookmark']
 };
 
 const enhancedReducer = persistReducer(persistConfig, rootReducer);

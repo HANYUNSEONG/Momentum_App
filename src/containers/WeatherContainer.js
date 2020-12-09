@@ -7,8 +7,8 @@ import Weather from '../components/Weather';
 
 const WeatherBox = styled.div`
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
 `;
 
 class WeatherContainer extends Component {
