@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import NameInputWrap from '../components/NameInputWrap';
 import NameView from '../components/NameView';
 import Time from '../components/Time';
+import Search from '../components/Search';
 
 import styled from 'styled-components';
 
@@ -30,6 +31,7 @@ class CenterContainer extends Component {
                 <NameWrap>
                     <NameView name={name} />
                     <Time />
+                    <Search />
                 </NameWrap>
             )
         }

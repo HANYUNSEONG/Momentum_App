@@ -9,7 +9,7 @@ const Item = styled.div`
 const BookmarkItem = ({ name, link }) => {
     return (
         <Item>
-            <a href={link} target="_blank">{name}</a>
+            <a href={link} target="_blank" rel="noopener noreferrer">{name}</a>
         </Item>
     )
 }
